@@ -5,12 +5,10 @@ import './Products.css';
 import UserContext from '../context/user-context';
 
 const Users = props => {
-    // const [users, setUsers] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [usersPerPage] = useState(5);
 
     let users = Object.values(useContext(UserContext))[0];
-    console.log(users)
 
     // Get current users
     const indexOfLastPost = currentPage * usersPerPage;
