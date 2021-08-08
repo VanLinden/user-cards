@@ -1,12 +1,13 @@
 import React from 'react';
 import './UserCard.css';
+import { NavLink } from 'react-router-dom';
 
 const UserCard = props => {
 console.log('aboutProps:', props.location.aboutProps)
   return (
       <div className="user-card">
           <div style={{ textAlign: 'center' }}>User Card</div>
-          {/* <a className="cancelButton-registration" onClick={e => this.modalRegClose()} >X</a> */}
+          <NavLink to="/" style={{float: "right", marginTop: "-25px"}}>X</NavLink>
 
           <div className="cardItems">
             First name: <span>{props.location.aboutProps.firstName}</span>
